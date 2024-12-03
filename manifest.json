@@ -1,0 +1,92 @@
+{
+	"manifest_version": 3,
+	"minimum_chrome_version": "132",
+	"offline_enabled": true,
+	"default_locale": "en",
+	"name": "__MSG_extName__",
+	"short_name": "ReplyBot",
+	"description": "__MSG_extDescription__",
+	"version": "0.0.1",
+	"author": "Brahmastra",
+	"icons": {
+		"128": "icon-128.png",
+		"16": "icon-24.png"
+	},
+
+	"action": {
+		"default_title": "__MSG_extTitle__"
+	},
+
+	"options_page": "options/index.html",
+
+	"side_panel": {
+		"default_path": "panel/index.html"
+	},
+
+	"background": {
+		"service_worker": "background/background.js",
+		"type": "module"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://web.whatsapp.com/*"],
+			"js": ["scripts/bot-loader.js"],
+			"run_at": "document_idle"
+		}
+	],
+
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Alt+R",
+				"windows": "Alt+R",
+				"mac": "Alt+R",
+				"linux": "Alt+R"
+			}
+		},
+
+		"openUnreadMsgPopup": {
+			"suggested_key": {
+				"default": "Alt+U"
+			},
+			"description": "__MSG_openPopup__"
+		},
+
+		"switchToPrevTab": {
+			"suggested_key": {
+				"default": "Alt+L"
+			},
+			"description": "__MSG_switchTab__"
+		}
+	},
+
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"assets/matrix.svg",
+				"assets/languages.json",
+				"AI/*",
+				"scripts/translator/*",
+				"scripts/writer/*",
+				"scripts/markdown/serializer/*",
+				"scripts/writer-preview/*",
+				"scripts/summarizer/*",
+				"scripts/observer/*",
+				"panel/js/om.compact.js",
+				"panel/js/om.event.js",
+				"panel/js/constant.js"
+			],
+			"matches": ["https://*/*"]
+		}
+	],
+
+	"permissions": ["scripting", "sidePanel", "storage", "aiLanguageModelOriginTrial"],
+	"host_permissions": ["https://web.whatsapp.com/*"],
+	"optional_host_permissions": ["https://*/*"],
+	"trial_tokens": [
+		"Ak3GEw312lWGSOCFaob4BczJlKfLOml9LAQ0DQHffKlgWyfeEcuJpGKOF0epGWe6EuWD6pOtJqtrH7BHvCymlgQAAAB1eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2VvbGZubmxna2FsbW9la2JubnBpa2xjb21sZmxpb2YiLCJmZWF0dXJlIjoiTGFuZ3VhZ2VEZXRlY3Rpb25BUEkiLCJleHBpcnkiOjE3NDk1OTk5OTl9",
+		"AjTD1tbdgvS7RnHVWHWQrHqxW91dunBpS41V/P4wiEY6hPXhbgYKHTbNjAHT1Wm/egs6oG7+TN6lQ9vQy9nFbwkAAABveyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2VvbGZubmxna2FsbW9la2JubnBpa2xjb21sZmxpb2YiLCJmZWF0dXJlIjoiVHJhbnNsYXRpb25BUEkiLCJleHBpcnkiOjE3NTMxNDI0MDB9",
+		"Ar0Hfzt8I+vSGARciMb6jESAdnCYP/a4TP/h988t/PXPUQurV3mmzEy3kGGD2F5eGoAyfvYHfBCTAvpT4VuGjAoAAABzeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2VvbGZubmxna2FsbW9la2JubnBpa2xjb21sZmxpb2YiLCJmZWF0dXJlIjoiQUlTdW1tYXJpemF0aW9uQVBJIiwiZXhwaXJ5IjoxNzUzMTQyNDAwfQ=="
+	]
+}

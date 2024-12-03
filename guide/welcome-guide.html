@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplyBot welcome guide</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        html {
+            scrollbar-width: thin;
+        }
+
+        body {
+            background-color: light-dark(whitesmoke, black);
+            color: light-dark(black, rgb(245, 245, 245));
+            font-size: 100%;
+            line-height: 1.4;
+        }
+
+        article {
+            background-color: light-dark(white, hsl(0, 0%, 10%));
+            box-shadow: rgba(219, 219, 219, 0.19) 0px 10px 20px, rgba(163, 163, 163, 0.23) 0px 6px 6px;
+            width: 70%;
+            margin-left: 15%;
+            padding: 1em;
+        }
+
+        li {
+            margin-bottom: 0.4em;
+
+            &>div {
+                font-weight: bold;
+            }
+        }
+
+        kbd {
+            font-weight: 500;
+            background-color: light-dark(hsl(0, 0%, 92%), rgb(60, 60, 60));
+            padding-inline: 1px;
+        }
+
+        video {
+            display: block;
+            max-width: 80%;
+            margin-inline: auto;
+            margin-top: 0.2em;
+            border-radius: 0.4em;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-inline: auto;
+
+            & th,
+            & td {
+                border: 1px solid rgb(160 160 160);
+                padding: 0.4em;
+            }
+        }
+    </style>
+    <h1 style="text-align: center;">Thanks for installing <strong>ReplyBot</strong></h1>
+    <article>
+        <h1>How to use ReplyBot</h1>
+
+        <p> Pin ReplyBot after install extension <br>
+            Click on ReplyBot icon or (<kbd>Alt + R</kbd> ) to open ReplyBot side panel <br>
+        </p>
+        <div> <span>Extension pinned status:</span> <var style="color: red;" id="pin_ext">Not pinned</var> </div>
+        <video src="" controls></video>
+
+        <table id="global-keyboard-shortcuts">
+            <caption>Global Keyboard shortcuts</caption>
+            <thead>
+                <tr>
+                    <th>Format Action</th>
+                    <th>Keyboard Shortcut</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Open side panel</td>
+                    <td id="_execute_action"><kbd>Alt + R</kbd></td>
+                    <td><button>Change</button></td>
+                </tr>
+
+                <tr>
+                    <td>Open unread message popup</td>
+                    <td id="openUnreadMsgPopup"><kbd>Alt + U</kbd></td>
+                    <td><button>Change</button></td>
+                </tr>
+
+                <tr>
+                    <td>Switch to previous tab</td>
+                    <td id="switchToPrevTab"><kbd>Alt + L</kbd></td>
+                    <td><button>Change</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h1>How to start using replyBot</h1>
+        <p>ReplyBot works right out of the box. Simply click the extension icon to open the ReplyBot side panel, add
+            your
+            business details, and configure it to fit your specific needs.</p>
+    </article>
+
+
+    <script type="module" src="./guide.js"></script>
+
+</body>
+
+</html>

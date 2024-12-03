@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplyBot - whatsapp auto-reply AI Bot configurations/conversation context</title>
+    <script type="module" src="/crx-hmr.js"></script>
+</head>
+
+<body>
+    <top-bar></top-bar>
+    <main>
+        <website-aibot-config></website-aibot-config>
+        <div id="no_open_chat">No chats are currently open in WhatsApp. <br>Please open a chat.</div>
+    </main>
+
+    <output id="snackbar" hidden></output>
+    <script type="module" src="./js/main.js"></script>
+    <style>
+        :scope {
+            color-scheme: light dark;
+            background-color: light-dark(white, black);
+        }
+
+        main {
+            display: flex;
+            width: 100vw;
+            overflow: auto;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+
+            &>* {
+                width: 100vw;
+                flex-shrink: 0;
+            }
+        }
+
+        #no_open_chat {
+            align-content: center;
+            min-height: 80vh;
+            color: red;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+* {
+	box-sizing: border-box;
+}
+
+:host {
+	color-scheme: light dark;
+	--card: 0 1px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	--main-clr: blueviolet;
+	--border: 1px solid #ccc;
+}
+
+:host([popover]) {
+	border: none;
+	margin: 0;
+	color: inherit;
+	box-shadow: var(--card);
+	background-color: light-dark(white, hsl(0, 0%, 25%));
+	inset: unset;
+	overflow: visible;
+}
+
+:host {
+	padding-left: 0;
+	margin-block: 0;
+	min-width: 360px;
+	max-width: 600px;
+	border-radius: 0.4em;
+	transform-origin: bottom;
+	scale: 1 0;
+	transition: scale 200ms ease-out;
+}
+
+:host::before {
+	content: "";
+	display: flex;
+	width: 25px;
+	height: 15px;
+	position: absolute;
+	z-index: 11;
+	bottom: -14px;
+	inset-inline: 0;
+	margin-inline: auto;
+	background-color: inherit;
+	clip-path: polygon(50% 100%, 100% 0, 0 0);
+}
+
+:host(:popover-open) {
+	@starting-style {
+		scale: 1 0;
+	}
+
+	scale: 1 1;
+}
+
+li {
+	list-style-type: none;
+	white-space-collapse: preserve;
+	padding: 0.2em 0.5em;
+	max-height: 5lh;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	cursor: pointer;
+
+	&:not(:last-child) {
+		margin-bottom: 0.2em;
+		border-bottom: var(--border);
+	}
+}

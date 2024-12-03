@@ -1,0 +1,320 @@
+{
+	"extName": {
+		"message": "ReplyBot.ai - Whatsapp automation AI Bot",
+		"description": "Extension name"
+	},
+
+	"extDescription": {
+		"message": "ReplyBot auto-replies to ur customers on WhatsApp Web. AI-powered, personalized responses. Auto-translate messages. Chat summarizer",
+		"description": "Extension description"
+	},
+
+	"extTitle": {
+		"message": "Open Whatsapp tab & replybot side panel (Alt+R)",
+		"description": "Extension title"
+	},
+
+	"openPopup": {
+		"message": "Open unread message popup",
+		"description": "Open unread message popup"
+	},
+
+	"switchTab": {
+		"message": "Switch to last tab",
+		"description": "Switch to last tab"
+	},
+
+	"summary_api_not_available": {
+		"message": "Summary API not available",
+		"description": "Summary API not available"
+	},
+
+	"summarizer_downloading_in_progress": {
+		"message": "Summarizer downloading in progress",
+		"description": "Summarizer downloading in progress"
+	},
+
+	"pronounce_translated_text": {
+		"message": "Pronounce translated text",
+		"description": "Pronounce translated text"
+	},
+
+	"reverse_language": {
+		"message": "Reverse language",
+		"description": "Reverse language"
+	},
+
+	"replace_src_text_with_translated": {
+		"message": "Replace src text with translated",
+		"description": "Replace src text with translated"
+	},
+
+	"improve": {
+		"message": "Improve",
+		"description": "Improve"
+	},
+
+	"translate": {
+		"message": "Translate",
+		"description": "Translate"
+	},
+
+	"fix_grammar": {
+		"message": "Fix grammar",
+		"description": "Fix grammar"
+	},
+
+	"make_shorter": {
+		"message": "Make Shorter",
+		"description": "Make Shorter"
+	},
+
+	"simplify": {
+		"message": "Simplify",
+		"description": "Simplify"
+	},
+
+	"make_longer": {
+		"message": "Make Longer",
+		"description": "Make Longer"
+	},
+
+	"finish_writing": {
+		"message": "Finish writing",
+		"description": "Finish writing"
+	},
+
+	"more_actions": {
+		"message": "More actions",
+		"description": "More actions"
+	},
+
+	"toggle_pin": {
+		"message": "Toggle pin",
+		"description": "Toggle pin"
+	},
+
+	"rewrite_instruction": {
+		"message": "Rewrite instruction",
+		"description": "Rewrite instruction"
+	},
+
+	"insert": {
+		"message": "Insert",
+		"description": "Insert"
+	},
+
+	"copy": {
+		"message": "Copy",
+		"description": "Copy"
+	},
+
+	"open_whatsapp": {
+		"message": "Open whatsapp",
+		"description": "Open whatsapp"
+	},
+
+	"reply": {
+		"message": "Reply",
+		"description": "Reply"
+	},
+	"enable_file_access_api": {
+		"message": "Enable file access api",
+		"description": "Enable file access api"
+	},
+
+	"enter_required_value": {
+		"message": "Enter required value",
+		"description": "Enter required value"
+	},
+
+	"done": {
+		"message": "Done",
+		"description": "Done"
+	},
+
+	"ask_question_hit_enter": {
+		"message": "Ask Question. Hit Enter",
+		"description": "Ask Question. Hit Enter"
+	},
+
+	"agent_name": {
+		"message": "Agent Name",
+		"description": "Agent Name"
+	},
+
+	"reply_customer": {
+		"message": "Reply customer",
+		"description": "Reply customer"
+	},
+
+	"add_to_context": {
+		"message": "Add to context",
+		"description": "Add to context"
+	},
+
+	"extract_webpages": {
+		"message": "Extract webpages",
+		"description": "Extract webpages"
+	},
+
+	"how_url_patterns_work": {
+		"message": "How URL Patterns Work in ReplyBot AI",
+		"description": "How URL Patterns Work in ReplyBot AI"
+	},
+
+	"example_of_url_patterns": {
+		"message": "Example of URL Patterns",
+		"description": "Example of URL Patterns"
+	},
+
+	"replybot_will_extract_the_ASIN": {
+		"message": "ReplyBot will extract the ASIN from the agent's input",
+		"description": "ReplyBot will extract the ASIN from the agent's input"
+	},
+
+	"if_the_customer_has_provided_the_ASIN": {
+		"message": "ReplyBot will check if the customer has provided the ASIN, or ask the customer for it if not available.",
+		"description": "ReplyBot will check if the customer has provided the ASIN, or ask the customer for it if not available."
+	},
+
+	"write_private_note": {
+		"message": "Write private note. Hit Enter",
+		"description": "Write private note. Hit Enter"
+	},
+
+	"private_notes": {
+		"message": "Private notes",
+		"description": "Private notes"
+	},
+
+	"auto_reply": {
+		"message": "Auto reply",
+		"description": "Auto reply"
+	},
+
+	"ask_before_reply": {
+		"message": "Ask before reply",
+		"description": "Ask before reply"
+	},
+
+	"suggest_upto_5_reply_messages": {
+		"message": "Suggest upto 5 reply messages",
+		"description": "Suggest upto 5 reply messages"
+	},
+
+	"replybot_training": {
+		"message": "ReplyBot Training",
+		"description": "ReplyBot Training"
+	},
+
+	"notify_schedule": {
+		"message": "Notify Schedule",
+		"description": "Notify Schedule"
+	},
+
+	"switch_tab_when_new_message_received": {
+		"message": "Switch Tab When new message received",
+		"description": "Switch Tab When new message received"
+	},
+
+	"switch_tab_time_schedule": {
+		"message": "Switch Tab Time schedule",
+		"description": "Switch Tab Time schedule"
+	},
+
+	"open_popup_when_new_message_received": {
+		"message": "Open popup When new message received",
+		"description": "Open popup When new message received"
+	},
+
+	"open_popup_time_schedule": {
+		"message": "Open popup Time schedule",
+		"description": "Open popup Time schedule"
+	},
+
+	"unread_messages_count_badge": {
+		"message": "Unread messages count badge",
+		"description": "Unread messages count badge"
+	},
+
+	"business_name": {
+		"message": "Business Name",
+		"description": "Business Name"
+	},
+
+	"no_open_chat": {
+		"message": "No chats are currently open in WhatsApp. Please open a chat",
+		"description": "No chats are currently open in WhatsApp. Please open a chat"
+	},
+
+	"add_conversation_data": {
+		"message": "Add conversation data",
+		"description": "Add conversation data"
+	},
+
+	"tone": {
+		"message": "Tone",
+		"description": "Tone"
+	},
+
+	"format": {
+		"message": "Format",
+		"description": "Format"
+	},
+
+	"prompt_api_not_available": {
+		"message": "Prompt API not available",
+		"description": "Prompt API not available"
+	},
+
+	"prompt_api_download": {
+		"message": "Prompt downloading in progress",
+		"description": "Prompt downloading in progress"
+	},
+
+	"Configuration": {
+		"message": "Configuration",
+		"description": "Configuration"
+	},
+
+	"configuration": {
+		"message": "🛠️ Configuration",
+		"description": "Configuration"
+	},
+
+	"keyboard_shortcuts": {
+		"message": "Keyboard shortcuts",
+		"description": "Keyboard shortcuts"
+	},
+
+	"keyboard_shortcuts0": {
+		"message": "Keyboard shortcuts",
+		"description": "Keyboard shortcuts"
+	},
+
+	"starter_guide": {
+		"message": "Starter guide",
+		"description": "Starter guide"
+	},
+
+	"changelog": {
+		"message": "Changelog",
+		"description": "Changelog"
+	},
+
+	"more_extensions": {
+		"message": "More extensions",
+		"description": "More extensions"
+	},
+
+	"permission_denied": {
+		"message": "🚫 Permission denied",
+		"description": "Permission denied"
+	},
+
+	"contact_us": {
+		"message": "Contact us",
+		"description": "contact_us"
+	}
+}

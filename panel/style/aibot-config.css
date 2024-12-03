@@ -1,0 +1,96 @@
+select,
+input[type="text"],
+input[type="number"],
+input[type="url"],
+textarea {
+	padding: 0.4em;
+	color: inherit;
+	font-size: 0.9rem;
+	border: var(--border);
+	border-radius: 0.4em;
+}
+
+select {
+	padding-block: 0.1em;
+}
+
+website-aibot-config,
+conversation-context {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.7em;
+}
+
+details {
+	border: var(--border);
+	border-radius: 0.4em;
+	background-color: light-dark(hsl(0, 0%, 96%), hsl(0, 0%, 10%));
+
+	& summary {
+		display: flex;
+		column-gap: 0.4em;
+		justify-content: center;
+		padding: 0.4em;
+		box-shadow: var(--card);
+		border-radius: 0.4em 0.4em 0 0;
+		background-color: light-dark(hsl(0, 0%, 90%), hsl(0, 0%, 25%));
+	}
+
+	& ul {
+		padding-inline: 0.4em;
+
+		& li {
+			display: flex;
+			padding-block: 0.2em;
+			margin-block: 0.2em;
+		}
+
+		& input[type="text"] {
+			flex-grow: 1;
+			border-radius: 0.4em 0 0 0.4em;
+		}
+
+		& input[type="checkbox"],
+		& input[type="radio"] {
+			scale: 1.2;
+		}
+
+		& button {
+			border-radius: 0 0.4em 0.4em 0;
+		}
+	}
+}
+
+writer-config-options {
+	display: flex;
+	justify-content: space-between;
+	margin-inline: 1em;
+}
+
+train-ai-bot,
+add-conversation-data {
+	padding-inline: 0.2em;
+	position: relative;
+
+	& label {
+		display: block;
+		text-align: center;
+	}
+
+	& input[type="url"] {
+		width: 100%;
+		margin-bottom: 0.4em;
+	}
+
+	& textarea {
+		field-sizing: content;
+		width: 100%;
+		min-height: 8lh;
+	}
+
+	& atom-icon[ico="attachment-plus"] {
+		position: absolute;
+		bottom: 0.5em;
+		right: 0.5em;
+	}
+}

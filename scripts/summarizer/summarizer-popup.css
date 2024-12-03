@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+
+:host {
+	color-scheme: light dark;
+	--card: 0 1px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	--main-clr: blueviolet;
+	--border: 1px solid #ccc;
+	--txt-clr: hsl(0, 0%, 5%);
+}
+
+:host([popover]) {
+	position: absolute;
+	border: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 0.4em;
+	box-shadow: var(--card);
+	color: light-dark(black, white);
+	background-color: light-dark(hsl(0, 0%, 94%), hsl(0, 0%, 20%));
+	inset: unset;
+	overflow: visible;
+}
+
+:host {
+	min-width: 360px;
+	max-width: 500px;
+	font-size: 16px;
+	transform-origin: top;
+	scale: 1 0;
+	transition: scale 200ms ease-out;
+	outline: 2px solid rgb(140, 0, 255);
+}
+
+:host::before {
+	content: "";
+	display: flex;
+	width: 25px;
+	height: 12px;
+	position: absolute;
+	z-index: 11;
+	top: -12px;
+	inset-inline: 0;
+	margin-inline: auto;
+	background-color: inherit;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+:host(:popover-open) {
+	@starting-style {
+		scale: 1 0;
+	}
+
+	scale: 1 1;
+}
+
+summary-types-row {
+	display: flex;
+	margin-inline: 1px;
+	margin-bottom: 0.15em;
+	box-shadow: var(--card);
+	border-radius: 7px 7px 0 0;
+	background-color: light-dark(whitesmoke, hsl(0, 0%, 10%));
+}
+
+summary-type {
+	padding: 0.2em 0.4em;
+	flex-grow: 1;
+	text-align: center;
+	cursor: pointer;
+
+	&[active] {
+		background-color: light-dark(white, hsl(0, 0%, 40%));
+		--block-sdw-clr: 204 51 255;
+		box-shadow: inset -3px 3px 3px 0px rgb(var(--block-sdw-clr) / 0.5),
+			inset 3px 0px 3px 0px rgb(var(--block-sdw-clr) / 0.5);
+	}
+
+	& span {
+		font-size: 0.7rem;
+		text-wrap: nowrap;
+	}
+}
+
+summary-pad-container {
+	display: flex;
+	overflow-x: auto;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+
+	& mark-writer-pad {
+		width: min(100%, 50vw);
+		flex-shrink: 0;
+	}
+}
+
+mark-writer-pad {
+	display: block;
+	min-height: 4lh;
+	max-height: 20lh;
+	padding: 5px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	border-radius: 8px;
+	background-color: light-dark(white, hsl(0, 0%, 16%));
+
+	&:empty {
+		background-image: url(/assets/matrix.svg);
+		box-shadow: none;
+	}
+
+	& ul,
+	& ol {
+		padding-left: 24px;
+	}
+}
+
+svg {
+	fill: light-dark(hsl(0, 0%, 5%), white);
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+
+	&.copy path {
+		d: path(
+			"M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+		);
+	}
+
+	&.download path {
+		d: path("M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z");
+	}
+}

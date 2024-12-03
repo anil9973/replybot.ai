@@ -1,0 +1,207 @@
+* {
+	box-sizing: border-box;
+}
+
+select {
+	font-size: 11px;
+	border: var(--border);
+	border-radius: 0.4em;
+	background-color: light-dark(hsl(0, 0%, 94%), hsl(0, 0%, 20%));
+}
+
+:host {
+	color-scheme: light dark;
+	--card: 0 1px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	--main-clr: blueviolet;
+	--border: 1px solid #ccc;
+	--txt-clr: hsl(0, 0%, 5%);
+}
+
+:host([popover]) {
+	position: absolute;
+	border: none;
+	margin: 0;
+	border-radius: 0.4em;
+	box-shadow: var(--card);
+	color: light-dark(black, white);
+	background-color: light-dark(hsl(0, 0%, 94%), hsl(0, 0%, 20%));
+	inset: unset;
+	overflow: visible;
+}
+
+:host {
+	min-width: 250px;
+	max-width: 400px;
+	font-size: 16px;
+	padding-block: 0 2px;
+}
+
+:host::before {
+	content: "";
+	display: flex;
+	width: 25px;
+	height: 12px;
+	position: absolute;
+	z-index: 11;
+	bottom: -12px;
+	inset-inline: 0;
+	margin-inline: auto;
+	background-color: inherit;
+	clip-path: polygon(50% 100%, 100% 0, 0 0);
+}
+
+header {
+	padding: 0.4em;
+	display: flex;
+	column-gap: 0.5em;
+	align-items: center;
+	justify-content: space-between;
+
+	& > .highlight {
+		margin-left: auto;
+	}
+}
+
+article {
+	& section:first-child {
+		border-radius: 1em 1em 2px 2px;
+	}
+}
+
+section {
+	padding: 0.4em;
+	background-color: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 15%));
+	position: relative;
+
+	&:hover svg {
+		opacity: 1;
+	}
+
+	& textarea {
+		border: none;
+		outline-offset: 2px;
+		background-color: inherit;
+		font-size: inherit;
+		field-sizing: content;
+		width: 100%;
+		max-height: 10lh;
+		scrollbar-width: thin;
+	}
+
+	& p {
+		margin-block: 0;
+	}
+
+	& details {
+		margin-top: 5px;
+	}
+
+	& svg {
+		position: absolute;
+		right: 24px;
+		background-color: rgba(128, 128, 128, 0.3);
+		opacity: 0;
+		transition: opacity 200ms ease-out;
+	}
+
+	& svg:first-child {
+		margin-left: 5px;
+	}
+}
+
+span {
+	&.data-type {
+		font-family: monospace;
+		font-size: small;
+		color: light-dark(hsl(0, 0%, 25%), hsl(0, 0%, 75%));
+	}
+
+	&.chip-item {
+		font-size: 0.75rem;
+		padding: 2px 0.4em;
+		background-color: light-dark(whitesmoke, hsl(0, 0%, 28%));
+		border-radius: 1em;
+		margin-right: 4px;
+	}
+}
+
+svg {
+	fill: light-dark(black, white);
+	height: 18px;
+	width: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+
+	/* &.copy path {
+		d: path(
+			"M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+		);
+	} */
+
+	&.replace path {
+		d: path(
+			"M19,8L15,12H18A6,6 0 0,1 12,18C11,18 10.03,17.75 9.2,17.3L7.74,18.76C8.97,19.54 10.43,20 12,20A8,8 0 0,0 20,12H23M6,12A6,6 0 0,1 12,6C13,6 13.97,6.25 14.8,6.7L16.26,5.24C15.03,4.46 13.57,4 12,4A8,8 0 0,0 4,12H1L5,16L9,12"
+		);
+	}
+
+	&.speak path {
+		d: path(
+			"M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"
+		);
+	}
+
+	&.speaking {
+		animation: beacon 500ms infinite alternate;
+		transform-origin: center;
+		fill: orange;
+	}
+
+	&.star-plus path {
+		d: path(
+			"M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z"
+		);
+	}
+
+	&.star-check path {
+		fill: orange;
+		d: path(
+			"M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17.8 21.2L22.6 16.4L21.3 15L17.7 18.6L16.2 17L15 18.2L17.8 21.2"
+		);
+	}
+
+	&.swap path {
+		d: path("M21,9L17,5V8H10V10H17V13M7,11L3,15L7,19V16H14V14H7V11Z");
+	}
+}
+
+@keyframes beacon {
+	from {
+		scale: 1.1;
+	}
+	to {
+		scale: 0.9;
+	}
+}
+
+output {
+	min-width: 8em;
+	background-color: #333;
+	color: rgb(255, 208, 0);
+	text-align: center;
+	border-radius: 12px;
+	padding: 4px 8px;
+	position: fixed;
+	z-index: 1000;
+	left: 40%;
+	bottom: 20px;
+	width: max-content;
+	translate: 0 200%;
+	animation: in-out 4s ease-out;
+}
+
+@keyframes in-out {
+	10%,
+	90% {
+		translate: 0 0;
+	}
+}

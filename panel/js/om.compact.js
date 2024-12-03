@@ -1,0 +1,1 @@
+/home/anilkarma/Projects/resource/framework/omjs/build/om.compact.js

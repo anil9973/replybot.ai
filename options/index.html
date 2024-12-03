@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplyBot.ai configurations, snippet manager</title>
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/layout.css">
+    <link rel="stylesheet" href="./style/setting.css">
+    <script type="module" src="./js/options.js"></script>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <nav>
+                <div class="nav-link"> <a href="#configuration" id="Configuration">Configuration</a> </div>
+
+                <div class="nav-link"> <a href="/guide/welcome-guide.html" id="starter_guide">Starter guide</a> </div>
+                <div class="nav-link"> <a href="/guide/changelog.html" id="changelog">Changelog</a> </div>
+                <div class="nav-link"> <a href="https://noterail.co" target="_blank" id="more_extensions">More
+                        extensions</a> </div>
+                <div class="nav-link"> <a href="#contactus" id="contact_us">Contact us</a> </div>
+            </nav>
+        </aside>
+        <article>
+            <section>
+                <h2 id="configuration">🛠️ Configuration</h2>
+                <blockquote>
+                    <div class="config-item">
+                        <div class="setting-info">
+                            <h3><span>Open side panel when chat open</span></h3>
+                            <div>
+                                <span>Chat context in side panel when chat open in whatsapp </span>
+                            </div>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="open_sidepanel" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </blockquote>
+            </section>
+
+
+            <section>
+                <h2 id="contactus">Contact us</h2>
+                <blockquote class="contact-form">
+                    <label>
+                        <div>Email</div>
+                        <input type="email" name="email" id="email" placeholder="emailadress@mail.com">
+                    </label>
+                    <label>
+                        <div>Subject</div>
+                        <input type="subject" name="subject" id="subject">
+                    </label>
+
+                    <label>
+                        <div>Message body</div>
+                        <textarea name="body" id="mailbody" rows="5"></textarea>
+                    </label>
+                    <div id="send-mail-buttons">
+                        <span>Send via: </span>
+                        <button style="--btn-clr:blueviolet">Send</button>
+                        <button id="osmail">OS Mail</button>
+                        <button id="gmail" style="--btn-clr:red">GMail</button>
+                    </div>
+                </blockquote>
+            </section>
+        </article>
+    </main>
+
+    <output id="snackbar" hidden></output>
+    <script type="module" src="./js/options.js"></script>
+</body>
+
+</html>
